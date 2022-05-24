@@ -1,0 +1,129 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Vollkorn', Georgia, 'Times New Roman', Times, serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{background-color: var(--cor03);}
+
+/*VARIAVEIS*/
+:root{
+    --cor01: #FFB300;
+    --cor02: #FFC338;
+    --cor03: #fafbfc;
+}
+
+/*CABEÇALHO*/
+header{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #FFB300,#FFC338);
+}
+#logo{
+    cursor: pointer;
+    font-size: 3em;
+    font-weight: 400;
+    letter-spacing: 10px;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+.menu{
+    display: flex;
+}
+.menu li + li{
+    margin-left: 20px;
+}
+.menu a{
+    display: block;
+    padding: 10px;
+    font-size: 1.125em;
+    color: white;
+    background: rgba(0,0,0,.1);
+    border-radius: 5px;
+    transition: all .2s;
+}
+.menu a:hover{
+    transition: all .2s;
+    background: rgba(0,0,0,.5);
+}
+
+/*CONTEUDO*/
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;   
+    margin: auto;
+}
+.animais-card{
+    box-shadow: 5px 5px 5px 0px rgba(44,44,44,0.15);
+    flex: 1 0 400px;
+    max-width: 80%;
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.animais-card p{
+    text-indent: 10px;
+    padding-top: 10px;
+    font-size: 1.09em;
+    opacity: .8;
+}
+.animais-card a{
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    color: white;
+    padding: 5px 0;
+    margin-top: 10px;
+    width: 100px;
+    align-self: center;
+    border-radius: 5px;
+    background: var(--cor01);
+    opacity: .8;
+    transition: all .2s;
+    font-weight: 700;
+}
+.animais-card a:hover{
+    transition: all .2s;
+    opacity: 1;
+}
+
+/*RODAPÉ*/
+footer{
+    font-size: 1.1em;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #FFB300,#FFC338);
+}
+
+/*MEDIA QUERY*/
+@media(max-width: 620px){
+    header{
+        justify-content: center;
+    }
+    .menu{
+        margin-top: 15px;
+    }
+}
